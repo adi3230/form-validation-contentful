@@ -35,6 +35,15 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String,
+    config: Object,
+  },
+  mounted() {
+    this.config.app.onConfigure(() => this.onConfigure());
+  },
+  methods: {
+    onConfigure() {
+      this.configuration.app.setReady();
+    },
   },
 };
 </script>
