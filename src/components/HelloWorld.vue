@@ -42,6 +42,7 @@ export default {
   },
   methods: {
     onConfigure() {
+      console.log('Method called');
       this.configuration.app.setReady();
     },
   },
